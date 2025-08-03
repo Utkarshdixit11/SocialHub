@@ -2,8 +2,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { AuthProvider } from './context/AuthContext'
 import { PostProvider } from './context/PostContext'
 import { MobileMenuProvider } from './context/MobileMenuContext'
-import ProtectedRoute from './components/ProtectedRoute'
-import ErrorBoundary from './components/ErrorBoundary'
+import ProtectedRoute from './Components/ProtectedRoute'
+import ErrorBoundary from './Components/ErrorBoundary'
 import LoginPage from './Components/login/login'
 import './App.css'
 import HomePage from "./Components/pages/Home/HomePage.jsx"
