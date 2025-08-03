@@ -1,0 +1,194 @@
+.home {
+    display: flex;
+    font-family: apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    min-height: 100vh; /* Ensure full height when used as main page */
+}
+
+.dashboard img{
+    border-radius: 50%;
+    margin-left: 55px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.dashboard {
+    color: whitesmoke;
+    padding: 20px;
+    background-color: #415E72;
+    /* Fixed: Remove fixed height, use min-height for flexibility */
+    min-height: 100vh;
+    /* Fixed: Add explicit width and flex properties for consistent sidebar behavior */
+    width: 280px;
+    flex-shrink: 0; /* Prevent shrinking in flex layouts */
+    gap: 10px;
+    margin-right: 10px;
+    /* Fixed: Add flex layout for better content organization */
+    display: flex;
+    flex-direction: column;
+    /* Fixed: Add box-sizing for better padding control */
+    box-sizing: border-box;
+}
+.dashboard h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.dashboard p{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Fixed: Better spacing for welcome message */
+.dashboard p:first-of-type {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+.dashboard p button{
+    font-size: 1.2rem;
+    color:whitesmoke;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.feed {
+    background-color: #F3E2D4;
+    /* Fixed: Use flex: 1 to take remaining space after dashboard */
+    flex: 1;
+    gap: 10px;
+    /* Fixed: Add proper padding and min-height */
+    padding: 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}
+.active{
+    color:whitesmoke !important;
+    padding-left:20px;
+    transition: all 0.3s ease;
+    height: 40px;
+    width: 75%;
+    background-color: rgba(128, 128, 128, 0.76) !important;
+    text-decoration: none;
+    border-radius: 20px;
+    margin: 10px;
+    border: none;
+}
+
+.logout-btn {
+    background-color: #dc3545 !important;
+    color: white !important;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 10px;
+    width: 75%;
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #c82333 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+    }
+
+    .dashboard {
+        /* Fixed: Better responsive behavior */
+        min-height: auto;
+        width: 100%;
+        padding: 15px;
+        margin-right: 0;
+        margin-bottom: 10px;
+        /* Fixed: Maintain flex layout but adjust direction */
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .dashboard h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .dashboard p {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .feed {
+        padding: 15px;
+        min-height: auto;
+    }
+
+    .dashboard p button {
+        width: auto;
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .dashboard img {
+        margin-left: 0;
+        width: 40px;
+        height: 40px;
+    }
+
+    .active {
+        width: auto;
+        padding: 8px 12px;
+        margin: 5px;
+    }
+
+    .logout-btn {
+        width: auto !important;
+        padding: 8px 12px !important;
+        margin: 5px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard {
+        padding: 10px;
+        /* Fixed: Ensure proper stacking on very small screens */
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .dashboard h3 {
+        font-size: 1rem;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .dashboard p {
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+    }
+
+    .dashboard p button {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+        min-width: 70px;
+    }
+}
+
